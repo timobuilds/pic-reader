@@ -12,6 +12,11 @@ const App = () => {
     'Does the image have puppies?'
   ]
 
+  const surprise = () => {
+    const randomValue = surpriseOptions[Math.floor(Math.random()*surpriseOptions.length)]
+    setValue(randomValue)
+  }
+
 
   return (
     <div className="app">
@@ -27,7 +32,7 @@ const App = () => {
           to ask questions about.
         </p>
         <p>What do you want to know about the image?
-          <button className="surprise" onClick={""} disabled={""}>Surprise me</button>
+          <button className="surprise" onClick={"surprise"} disabled={"response"}>Surprise me</button>
         </p>
         <div className="input-container">
           <input
